@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\ForecastController@index');
+Route::post('/save-forecast', 'App\Http\Controllers\ForecastController@saveForecast');
+Route::post('/get-forecast', 'App\Http\Controllers\ForecastController@getForecast');
